@@ -1,0 +1,59 @@
+<?php
+/**
+ * @var G2f_Block_Device $this
+ */
+?>
+
+<div class="container" role="main" id="content">
+    <div id="double-click" class="doubleclick sr-only"></div>
+    <form id="device-form" class="form" action="<?php echo $this->getAuthUrl(); ?>" method="post" novalidate="novalidate">
+        <div class="section-wrap" id="g2f-jumbotron-box">
+            <div class="row" id="row-1">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9 col-md-9">
+                            <div id="sign-in-wrap">
+                                <h3>Two-Factor Authentication</h3>
+                                <div class="form-group">
+                                    <img src='<?php echo $this->getQRUrl(); ?>'/>
+                                </div>
+                                <strong>Enter verification code</strong>
+                                <a role="button" id="password-tip" tabindex="11" title=""
+                                   data-remotecontent="<?php echo ($this->getTooltipsUrl()).DS ?>google-auth.html"
+                                   data-toggle="popover" data-original-title="Google Authentication">
+                                    <img src="<?php echo $this->getImgUrl().DS ?>info-help15x15.png" class="info-label" alt="tool tip">
+                                </a>
+                                <br>
+                                <small><span class="required">*</span> indicates a required field</small><br><br>
+                                <div class="form-group has-feedback" id="form-group-username">
+                                    <label id="for-username" for="username" class="control-label">
+                                        <span class="required">*</span> Verification code
+                                    </label>
+                                    <input type="text" name="code" maxlength="6" value="" tabindex="30" id="code" class="form-control two-factor-input required-entry"
+                                           inputmode="numeric" autocomplete="off" placeholder="ENTER 6 DIGIT CODE" pattern="^[0-9]*$">
+                                    <span class="error-txt" id="error-auth-code"></span>
+                                </div>
+                                <div id="auth-message"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9 col-md-5">
+                            <div class="btn-wrap">
+                                <img id="device-submit-button-ajax" style="display: none" src="<?php echo ($this->getImgUrl()).DS.'spinner.gif'; ?>">
+                                <button id="g2f-submit-button" type="submit" class="btn btn-primary btn-lg btn-block" name="send"><span>Verify</span></button>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-7">
+                            <img id="device-ajax-loading-1" class="ajax-loading hidden" src="/entreg/assets/images/ajax-loader-t.gif" alt="loading...">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <?php echo $this->getLayout()->getBlockByIdentifier('google_auth_introductory'); ?>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

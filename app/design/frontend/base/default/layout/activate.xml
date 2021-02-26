@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <registration_activate_index translate="label">
+        <reference name="content">
+            <block type="registration/activate" name="registration_confirm_index" template="registration/activateaccount.phtml" />
+        </reference>
+    </registration_activate_index>
+</layout>

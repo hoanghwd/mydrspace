@@ -1,0 +1,48 @@
+<?php
+/**
+ * @var Core_Page_Block_Html_Footer $this
+ */
+?>
+
+<div id="global-footer--wrap" class="global-footer--wrap">
+    <footer class="global-footer">
+        <?php echo $this->getLayout()->getBlockByIdentifier('footer_nav') ?>
+        <div class="global-footer--copyright">
+            <address><?php echo $this->getCopyright() ?></address>
+        </div>
+        <ul class="global-footer--social">
+            <?php echo $this->getLayout()->getBlockByIdentifier('footer_social_networks') ?>
+        </ul>
+    </footer>
+</div>
+<div class="modal fade" id="session-timeout-modal" tabindex="-1" role="dialog" aria-labelledby="session-timeout-modal">
+    <?php echo $this->getLayout()->getBlockByIdentifier('idle_notification') ?>
+</div>
+<div id="blockUI" style="display:none;"></div>
+
+<input type="hidden" id="base-url" value="<?php echo $this->getBaseUrl() ?>">
+
+<div class="overlay">
+    <div id="loading-img"></div>
+</div>
+
+<script type="text/javascript">
+    var isLoggedIn = <?php echo ($this->isLoggedIn()) ? 'true' : 'false' ?>;
+
+    jQuery(document).ready(function () {
+        if (top != self) {
+            top.location = self.location;
+        }
+    });
+
+    jQuery(function () {
+        jQuery('[data-toggle="popover"]').popover({
+            container: "body",
+            trigger: "focus hover",
+            placement: "top",
+            html: true,
+            content: popoverContent
+        });
+    });
+</script>
+

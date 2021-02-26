@@ -1,0 +1,33 @@
+
+<?php
+/**
+ * @see Core_Page_Block_Html_CookieNotice
+ */
+?>
+
+<?php if (Virtual::helper('core/cookie')->isUserNotAllowSaveCookie()): ?>
+    <div class="global-site-notice notice-cookie" id="notice-cookie-block">
+        <div class="notice-inner">
+            <div class="notice-text"><?php echo $this->getCookieRestrictionBlockContent(); ?></div>
+            <div class="actions"><button class="button" onclick="allowSaveCookie()"><span><span><?php echo ('Allow');?></span></span></button></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        function allowSaveCookie() {
+            Mage.Cookies.set('<?php echo Core_Helper_Cookie::IS_USER_ALLOWED_SAVE_COOKIE; ?>',
+                             '<?php echo Virtual::helper('core/cookie')->getAcceptedSaveCookiesWebsiteIds()?>',
+                             new Date(new Date().getTime() + <?php echo Virtual::helper('core/cookie')->getCookieRestrictionLifetime() ?> * 1000));
+            if (Mage.Cookies.get('<?php echo Core_Helper_Cookie::IS_USER_ALLOWED_SAVE_COOKIE; ?>')) {
+                window.location.reload();
+            }
+            else {
+                window.location.href = '<?php echo Virtual::getUrl('cms/index/noCookies')?>';
+            }
+        }
+        $('notice-cookie-block').show();
+        /* ]]> */
+    </script>
+<?php endif; ?>
+
+

@@ -1,0 +1,110 @@
+<div class="row grid-row-margin-34" id="dr-profile-section" style="display:none;margin-top: 20px;">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <h3 class="subhead subhead-lg">Step 6: <strong>Enter your profile</strong></h3>
+        <p>Please fill out your professional</p>
+        <small><span class="required">*</span>indicates a required field</small>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <strong>Your professional</strong>
+        <div class="form-group" id="form-group-tMedicalType">
+            <label class="control-label" id="for-tMedicalType" for="tMedicalType">
+                <span class="required">*</span>Medical Type
+            </label>
+            <select name="tMedicalType" tabindex="38" class="form-control" id="tMedicalType">
+                <?php echo $this->renderMedicalType(); ?>
+            </select>
+            <span class="error-txt" id="error-tMedicalType"></span>
+            <span class="sr-only" id="sr-only-error-tMedicalType"></span>
+        </div>
+        <div class="form-group" id="form-group-tSpecialties">
+            <label class="control-label" id="for-tSpecialties" for="tSpecialties">
+                <span class="required">*</span>Specialties
+            </label>
+            <input name="tSpecialties" tabindex="39" title="" class="form-control" id="tSpecialties" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tSpecialties"></span>
+            <span class="sr-only" id="sr-only-error-tSpecialties"></span>
+        </div>
+        <div class="form-group" id="form-group-tPracticeName">
+            <label class="control-label" id="for-tPracticeName" for="tmI">Practice Name</label>
+            <input name="tPracticeName" tabindex="40" title="" class="form-control" id="tPracticeName" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tPracticeName"></span>
+            <span class="sr-only" id="sr-only-error-tPracticeName"></span>
+        </div>
+        <div class="form-group" id="form-group-tEducation">
+            <label class="control-label" id="for-tEducation" for="tEducation">
+                <span class="required">*</span>Education
+            </label>
+            <input name="tEducation" tabindex="41" title="" class="form-control" id="tEducation" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tEducation"></span>
+            <span class="sr-only" id="sr-only-error-tEducation"></span>
+        </div>
+        <div class="form-group" id="form-group-tSchoolOfGraduate">
+            <label class="control-label" id="for-tSchoolOfGraduate" for="tSchoolOfGraduate">
+                <span class="required">*</span>School of graduate
+            </label>
+            <input name="tSchoolOfGraduate" tabindex="42" title="" class="form-control" id="tSchoolOfGraduate" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tSchoolOfGraduate"></span>
+            <span class="sr-only" id="sr-only-error-tSchoolOfGraduate"></span>
+        </div>
+        <div class="form-group" id="form-group-tInNetworkInsurances">
+            <label class="control-label" id="for-tInNetworkInsurances" for="tInNetworkInsurances">
+                <span class="required">*</span>In-Network Insurances
+            </label>
+            <input name="tInNetworkInsurances" tabindex="43" title="" class="form-control" id="tInNetworkInsurances" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tInNetworkInsurances"></span>
+            <span class="sr-only" id="sr-only-error-tInNetworkInsurances"></span>
+        </div>
+        <div class="form-group" id="form-group-tHospitalAffiliations">
+            <label class="control-label" id="for-tHospitalAffiliations" for="tHospitalAffiliations">
+                <span class="required">*</span>Hospital Affiliations
+            </label>
+            <input name="tHospitalAffiliations" id="tHospitalAffiliations" tabindex="44" title="" class="form-control required-entry" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tHospitalAffiliations"></span>
+            <span class="sr-only" id="sr-only-error-tHospitalAffiliations"></span>
+        </div>
+        <div class="form-group" id="form-group-tResidency_1">
+            <label class="control-label" id="for-tResidency_1" for="tResidency_1">
+                <span class="required">*</span>Residency Program 1
+            </label>
+            <input name="tResidency_1" id="tResidency_1" tabindex="45" title="" class="form-control" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tResidency_1"></span>
+            <span class="sr-only" id="sr-only-error-tResidency_1"></span>
+        </div>
+        <div class="form-group" id="form-group-tResidency_2">
+            <label class="control-label" id="for-tResidency_2" for="tResidency_2">Residency Program 2</label>
+            <input name="tResidency_2" id="tResidency_2" tabindex="46" title="" class="form-control" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tResidency_2"></span>
+            <span class="sr-only" id="sr-only-error-tResidency_2"></span>
+        </div>
+        <div class="form-group" id="form-group-tProfessionalStatement">
+            <label class="control-label" id="for-tProfessionalStatement" for="tProfessionalStatement">
+                <span class="required">*</span>Professional Statement
+            </label>
+            <textarea class="form-control" style="min-height:200px;" id="tProfessionalStatement" name="tProfessionalStatement"></textarea>
+            <span class="error-txt" id="error-tProfessionalStatement"></span>
+            <span class="sr-only" id="sr-only-error-tProfessionalStatement"></span>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <strong>Picture</strong>
+        <div class="form-group" id="form-group-tDrPicture">
+            <div id="fileuploader">Upload</div>
+            <script>
+                jQuery(document).ready(function() {
+                    jQuery("#fileuploader").uploadFile({
+                        url:"<?php echo $this->getUploadUrl() ?>",
+                        fileName    : "myfile",
+                        showDelete  : true,
+                        multiple    : false,
+                        acceptFiles : ".png,.jpg,.gif",
+                        showPreview : true,
+                        allowDuplicates : false,
+                        showFileCounter : false
+                    });
+                });
+            </script>
+            <span class="error-txt" id="error-tDrPicture"></span>
+            <span class="sr-only" id="sr-only-error-tDrPicture"></span>
+        </div>
+    </div>
+</div>

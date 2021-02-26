@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Page>
+            <active>true</active>
+            <codePool>Core</codePool>
+        </Page>
+        <Cms>
+            <active>true</active>
+            <codePool>Core</codePool>
+        </Cms>
+        <Search>
+            <active>true</active>
+            <codePool>Core</codePool>
+        </Search>
+        <Menu>
+            <active>true</active>
+            <codePool>Core</codePool>
+        </Menu>
+        <Mail>
+            <active>true</active>
+            <codePool>Core</codePool>
+        </Mail>
+    </modules>
+</config>

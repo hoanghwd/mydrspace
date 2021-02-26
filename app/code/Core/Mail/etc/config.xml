@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Core_Mail>
+            <version>1.6.0.0.2</version>
+        </Core_Mail>
+    </modules>
+    <global>
+        <models>
+            <mail>
+                <class>Core_Mail_Model</class>
+            </mail>
+        </models>
+    </global>
+</config>

@@ -1,0 +1,157 @@
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Mage
+ * @package     Errors
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: medium-content-sans-serif-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.u-fontWeightBold {
+    font-weight: 700!important;
+    font-weight: 600!important;
+}
+.u-fontSize200 {
+    font-size: 120px!important;
+    color: #444 !important;
+}
+.u-size5of12 {
+    width: 41.66666667%!important;
+}
+.u-size10of12, .u-size11of12, .u-size12of12, .u-size1of12, .u-size2of12, .u-size3of12, .u-size4of12, .u-size5of12, .u-size6of12, .u-size7of12, .u-size8of12, .u-size9of12 {
+    float: left!important;
+}
+
+.u-fontSize75 {
+    font-size: 34px!important;
+}
+.u-textColorLight {
+    color: rgba(0,0,0,.3)!important;
+    fill: rgba(0,0,0,.3)!important;
+}
+.u-size7of12 {
+    width: 58.33333333%!important;
+}
+.u-size10of12, .u-size11of12, .u-size12of12, .u-size1of12, .u-size2of12, .u-size3of12, .u-size4of12, .u-size5of12, .u-size6of12, .u-size7of12, .u-size8of12, .u-size9of12 {
+    float: left!important;
+}
+.u-paddingTop70 {
+    padding-top: 70px!important;
+}
+.u-paddingLeft0 {
+    padding-left: 0!important;
+}
+
+blockquote, dd, dl, figure, form, h1, h2, h3, h4, h5, h6, menu, ol, p, pre, ul {
+    margin: 0;
+}
+
+
+.messages {
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.messages li {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.messages ul {
+    padding: 10px 17px 18px;
+    margin: 0 0 -11px;
+    background-position: 35px 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.messages ul li {
+    margin: 0;
+    padding: 0 0 3px;
+}
+
+.messages a {
+    text-decoration: underline;
+}
+
+.messages a:hover {
+    text-decoration: none;
+}
+
+.messages li.error-msg,
+.messages li.success-msg,
+.messages li.note-msg,
+.messages li.notice-msg {
+    border-style: solid !important;
+    border-width: 1px !important;
+    font-size: 12px !important;
+}
+
+.messages li.error-msg {
+    border-color: #e9581f;
+    background-color: #fff5f3;
+    color: #d91a00;
+}
+
+.messages li.error-msg a {
+    color: #d91a00;
+}
+
+.messages li.success-msg {
+    border-color: #446423;
+    background-color: #eff5ea;
+    color: #3d6611;
+}
+
+.messages li.success-msg a {
+    color: #3d6611;
+}
+
+.messages li.note-msg,
+.messages li.notice-msg {
+    border-color: #fcd344;
+    background-color: #fafaec;
+    color: #3d6611;
+}
+
+.messages li.note-msg a,
+.messages li.notice-msg a {
+    color: #3d6611;
+}
+
+.field:after,
+.buttons-set:after,
+.clear:after,
+.form-list li:after {
+    display: block;
+    content: ".";
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+}

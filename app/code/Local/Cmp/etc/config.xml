@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <cmp>
+            <version>0.1.0</version>
+        </cmp>
+    </modules>
+    <global>
+        <blocks>
+            <cmp>
+                <class>Cmp_Block</class>
+            </cmp>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <cmp>
+                <use>standard</use>
+                <args>
+                    <module>cmp</module>
+                    <frontName>cmp</frontName>
+                </args>
+            </cmp>
+        </routers>
+        <layout>
+            <updates>
+                <cmp>
+                    <file>cmp.xml</file>
+                </cmp>
+            </updates>
+        </layout>
+
+    </frontend>
+</config>

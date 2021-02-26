@@ -1,0 +1,17 @@
+<div class="row grid-row-margin-34" id="account-types-section">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <h3 class="subhead subhead-lg">Step 3: <strong>Please tell us who you are</strong></h3>
+        <?php echo $this->getLayout()->getBlockByIdentifier('create_account_step3'); ?>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="radio">
+            <p><strong>Please choose which type of account you would like to create</strong></p>
+            <label class="radio-inline" id="for-rAccount1" for="rAccount1">
+                <input name="raccount" tabindex="12" id="rAccount1" type="radio" value="personal"> I'm Patient
+            </label>
+            <label class="radio-inline" id="for-rAccount2" for="rAccount2">
+                <input name="raccount" tabindex="13" id="rAccount2" type="radio" value="business"> I'm physician
+            </label>
+        </div>
+    </div>
+</div>

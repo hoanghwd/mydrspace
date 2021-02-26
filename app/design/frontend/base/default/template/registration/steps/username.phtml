@@ -1,0 +1,29 @@
+<div class="row grid-row-margin-34" id="top" style="margin-top: 20px;">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <h3 class="subhead subhead-lg">Step 1: <strong>Choose your username</strong></h3>
+        <p>Please enter a username which will uniquely identify you with <?php echo APP_NAME ?>.</p>
+        <small><span class="required">*</span> indicates a required field</small>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="form-group has-feedback" id="form-group-tuserName">
+            <label class="control-label" id="for-tuserName" for="tuserName"><span class="required">*</span> Username
+                <a tabindex="1" title="" id="username-tip" role="button" data-original-title="Username" data-toggle="popover"
+                   data-remotecontent="<?php echo ($this->getTooltipsUrl()).DS ?>tool-tip-user-name.html">
+                    <img src="<?php echo $this->getImgUrl().DS ?>info-help15x15.png" class="info-label" alt="tool tip">
+                </a>
+            </label>
+            <input name="tuserName" tabindex="2" title="" class="form-control required-entry" id="tuserName"
+                   aria-describedby="helpBlock" type="text" maxlength="50" value="" data-original-title=""
+                   autocapitalize="off" autocomplete="off" autocorrect="off">
+            <span id="check-username-available" style="color:#218748; display:none; margin-top: 12px;">
+                <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+                <strong>Available!</strong>
+            </span>
+            <span class="error-txt" id="error-tuserName"></span>
+            <span class="sr-only" id="sr-only-error-tuserName"></span>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <span id="check-username-response"></span>
+    </div>
+</div>

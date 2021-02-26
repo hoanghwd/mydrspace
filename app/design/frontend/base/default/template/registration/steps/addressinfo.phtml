@@ -1,0 +1,160 @@
+<div class="row grid-row-margin-34 hidden" id="account-types-section">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <h3 class="subhead subhead-lg">Step 5: <strong>Find address by...</strong></h3>
+        <p>Please enter the address so USPS can find the best deliverable option for you.</p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="radio">
+            <p><strong>Please choose how you would like to find your address</strong></p>
+            <label class="radio-inline" id="for-rAddressLookup" for="rAddressLookup">
+                <input name="rlookup" tabindex="27" id="rAddressLookup" type="radio" checked="checked" value="address"> Address
+            </label>
+        </div>
+    </div>
+</div>
+<div class="row grid-row-margin-34" id="address-section">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="lookup hidden" id="find-by-address">
+            <h3 class="subhead subhead-lg">Step 5: <strong>Find your <span id="address-type"></span> address</strong></h3>
+            <p>Fill out all your address information.</p>
+            <small><span class="required">*</span>indicates a required field</small>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="lookup hidden" id="address-section-lookup">
+            <div id="addressHolderStep1">
+                <div class="row bottom-margin-12">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <strong>Enter your address</strong>
+                    </div>
+                </div>
+                <div class="row" id="country-wrap" style="display: none">
+                    <div class="col-xs-12 col-sm-8 col-md-6">
+                        <div class="form-group">
+                            <label id="for-scountry" for="scountry"><span class="required">*</span> Country</label>
+                            <select name="scountry" tabindex="28" class="form-control" id="scountry" rel="addressResult" >
+                                <option id="oUS" selected="selected" value="840 UNITED STATES">UNITED STATES</option>
+                            </select>
+                            <span class="error-txt" id="error-scountry"></span>
+                            <span class="sr-only" id="sr-only-error-scountry"></span>
+                        </div>
+                    </div>
+                </div>
+                <?php //Enter address: For professional  ?>
+                <div class="row hidden" id="company-wrap">
+                    <div class="col-xs-12 col-sm-8 col-md-6">
+                        <div class="form-group" id="form-group-tcompany">
+                            <label class="control-label" id="for-tcompany" for="tcompany"><span class="required">*</span>Bussiness name</label>
+                            <input name="tcompany" tabindex="29" title="" class="form-control" id="tcompany" type="text"
+                                   maxlength="50" value="" data-original-title="">
+                            <span class="error-txt" id="error-tcompany"></span>
+                            <span class="sr-only" id="sr-only-error-tcompany"></span>
+                        </div>
+                    </div>
+                </div>
+                <?php //Enter address: Common area for both  ?>
+                <div id="country-holder">
+                    <div id="us">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8 col-md-6">
+                                <div class="form-group" id="form-group-taddress">
+                                    <label class="control-label" id="for-taddress" for="taddress"><span class="required">*</span> Street Address</label>
+                                    <input name="taddress" tabindex="30" title="" class="form-control required-entry" id="taddress" type="text"
+                                           maxlength="50" value="" data-original-title="" rel="addressResult">
+                                    <span class="error-txt" id="error-taddress"></span>
+                                    <span class="sr-only" id="sr-only-error-taddress"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8 col-md-6">
+                                <div class="form-group" id="form-group-tapt">
+                                    <label class="control-label" id="for-tapt" for="tapt">Apt/Suite/Other</label>
+                                    <input name="tapt" tabindex="31" title="" class="form-control" id="tapt" type="text" maxlength="50" value="" data-original-title="">
+                                    <span class="error-txt" id="error-tapt"></span>
+                                    <span class="sr-only" id="sr-only-error-tapt"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8 col-md-6">
+                                <div class="form-group" id="form-group-tcity">
+                                    <label class="control-label" id="for-tcity" for="tcity"><span class="required">*</span> City</label>
+                                    <input name="tcity" tabindex="32" title="" class="form-control required-entry" id="tcity" type="text"
+                                           maxlength="50" value="" data-original-title="" rel="addressResult">
+                                    <span class="error-txt" id="error-tcity"></span>
+                                    <span class="sr-only" id="sr-only-error-tcity"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8 col-md-6">
+                                <div class="form-group" id="form-group-sstate">
+                                    <label class="control-label" id="for-sstate" for="sstate"><span class="required">*</span> State</label>
+                                    <select name="sstate" tabindex="33" class="form-control required-entry" id="sstate" rel="addressResult">
+                                        <?php echo $this->renderStateOption(); ?>
+                                    </select>
+                                    <span class="error-txt" id="error-sstate"></span>
+                                    <span class="sr-only" id="sr-only-error-sstate"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8 col-md-6">
+                                <div class="form-group" id="form-group-tzip">
+                                    <label class="control-label" id="for-tzip" for="tzip">ZIP Code™</label>
+                                    <input name="tzip" tabindex="34" title="" class="form-control required-entry" id="tzip" type="text" maxlength="10" value=""
+                                           data-original-title="" rel="addressResult">
+                                    <span class="error-txt" id="error-tzip"></span>
+                                    <span class="sr-only" id="sr-only-error-tzip"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="error error-txt error-txt-blk hidden" id="step1-ams-address-error-msg"></div>
+                        <div class="error error-txt error-txt-blk hidden" id="step1-ams-update-address-error">
+                            <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span> There was a problem while updating your address.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row grid-row-margin" id="privacy-policy-section" style="display: none;">
+        <?php echo $this->getLayout()->getBlockByIdentifier('account_create_privacy'); ?>
+    </div>
+</div>
+<div tabindex="-1" class="modal fade" id="confirm-modal" role="dialog" aria-labelledby="confirm-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" aria-label="Close" type="button" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="confirm-modal-label">Verify Email Address</h4>
+            </div>
+            <div class="modal-body">
+                <p>In order to complete your registration, we require you to validate your email address. Please enter your email address as
+                    entered during registration.</p>
+                <div class="form-group" id="form-group-tEmailVerification">
+                    <label class="control-label" id="for-tEmailVerification" for="tEmailVerification">
+                        <span class="required">*</span> Re-enter your email address
+                    </label>
+                    <input name="tEmailVerification" tabindex="%{#tabindexanchor}" class="form-control" id="tEmailVerification" type="text" maxlength="50">
+                    <div class="hidden" id="email-verification-error"><span class="error-txt" id="error-tEmailVerification">
+                        <span class="error-txt-blk">
+                            <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>The email address you entered does not match the email address entered during registration.</span>
+                        </span>
+                    </div>
+                    <span class="sr-only" id="sr-only-error-tEmailVerification"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default btn-lg" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary btn-lg" id="btn-submit-verifyEmailDlg" type="button">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

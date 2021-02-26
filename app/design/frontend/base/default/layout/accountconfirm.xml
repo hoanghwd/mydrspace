@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <registration_confirm_index translate="label">
+        <reference name="content">
+            <block type="registration/confirm" name="registration_confirm_index" template="registration/accountconfirm.phtml" />
+        </reference>
+    </registration_confirm_index>
+</layout>

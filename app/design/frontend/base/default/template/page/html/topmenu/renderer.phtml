@@ -1,0 +1,28 @@
+<?php
+
+/** @var Core_Page_Block_Html_Topmenu_Renderer $this */
+
+$menu = $this->getMenu();
+$html = '';
+
+if( is_array($menu) && sizeof($menu) > 0 ) {
+    foreach ($menu AS $child) {
+        if($child['is_active_parent'] == 1) {
+            $qt = $child['has_qt'] ? ($child['has_qt']) . ' ' : NULL;
+            $firstChildClass = ($child['position_id'] == 0) ? 'nav-first-element ' : NULL;
+            $href = ($this->getBaseUrl()).DS.$child['has_link'];
+
+            $html .= '<li class="' . $qt . $child['li_header_class'] . '">';
+            $html .=    '<a tabindex="-1" name="' . $child['menu_link_id'] . '" id="' . $child['menu_link_id'] . '" 
+                            href="' .$href . '" class="hidden-skip">Skip</a>';
+            $html .=    '<a aria-expanded="false" role="menuitem" tabindex="' . $child['tab_index'] . '" aria-haspopup="true" 
+                            class="' . $firstChildClass . $child['menu_title_class'] . '" 
+                            href="' . $href . '">' . $child['menu_title'] .
+                        '</a>';
+            $html .=    html_entity_decode($child['content']);
+            $html .= '</li>';
+        }//if
+    }//foreach
+}
+
+return $html;

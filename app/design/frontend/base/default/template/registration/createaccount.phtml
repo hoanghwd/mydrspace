@@ -1,0 +1,46 @@
+<?php
+/**
+ * @var Registration_Block_Form_Createaccount $this
+ */
+?>
+
+<div class="container" id="content" role="main">
+    <form name="registration-form" id="registration-form" action="<?php echo $this->getRegUrl() ?>" method="post" novalidate="novalidate">
+        <input type="hidden" id="action-url" value="<?php echo $this->getRegUrl() ?>">
+        <?php //--- Step 1: Choose username --- ?>
+        <?php echo $this->getChildHtml('registration_username') ?>
+
+        <?php //--- Step 2: Enter security information --- ?>
+        <?php echo $this->getChildHtml('registration_security_info') ?>
+
+        <?php //--- Step 3: Please tell us who you are --- ?>
+        <?php echo $this->getChildHtml('registration_select_account') ?>
+
+        <?php //--- Step 4: Basic contact information --- ?>
+        <?php echo $this->getChildHtml('registration_contact_info') ?>
+
+        <?php //--- Step 5: Address info --- ?>
+        <?php echo $this->getChildHtml('registration_address_info') ?>
+
+        <?php //--- Step 6: Specialties --- ?>
+        <?php echo $this->getChildHtml('registration_specialties') ?>
+
+        <?php //--- Submit --- ?>
+        <div class="row grid-row-margin-34" id="submit-profile-section" style="margin-top: 20px;display: none">
+            <div class="col-xs-12 col-sm-4 col-md-4"></div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group has-feedback" id="form-group-submit-profile">
+                    <div class="col-xs-12 col-sm-8 col-md-6">
+                        <div class="btn-wrap">
+                            <button id="submit-profile-btn" type="submit" class="btn btn-primary btn-lg btn-block" name="submit-profile-btn">
+                                <span>Create Profile</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input name="validationErrors" id="validation-errors" type="hidden" value="false">
+    </form>
+</div>

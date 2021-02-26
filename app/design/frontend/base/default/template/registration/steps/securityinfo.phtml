@@ -1,0 +1,164 @@
+<?php
+/**
+ * @var Registration_Block_Steps_Security $this
+ */
+?>
+<div class="row grid-row-margin">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <h3 class="subhead subhead-lg">Step 2: <strong>Enter your security information</strong></h3>
+        <p>Please create a password for your account. We highly recommend you create a unique password - one that you
+            don't use for other websites.</p>
+        <small><span class="required">*</span> indicates a required field</small>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <strong>Pick a Password</strong>
+        <div class="form-group" id="form-group-tPassword">
+            <label class="control-label" id="for-tPassword" for="tPassword">
+                <span class="required">*</span>Password
+            </label>
+            <input name="tPassword" tabindex="3" title="" class="form-control required-entry" id="tPassword" type="password" size="45" maxlength="50"
+                   value="" data-original-title="Pick a Password" autocomplete="off">
+            <span class="error-txt" id="error-tPassword"></span>
+            <span class="sr-only" id="sr-only-error-tPassword"></span>
+        </div>
+        <div id="popover_content_wrapper" style="display: none">
+            <strong>Your password must:</strong>
+            <ul class="list-unstyled pswd_list">
+                <li class="pswd_info_valid" id="pswd_info_username">Not match your username</li>
+                <li class="pswd_info_invalid" id="pswd_info_length">Be 8 to 50 characters long</li>
+                <li class="pswd_info_invalid" id="pswd_info_capital">Have at least one upper case letter</li>
+                <li class="pswd_info_invalid" id="pswd_info_lower">Have at least one lower case letter</li>
+                <li class="pswd_info_invalid" id="pswd_info_number">Have at least one number</li>
+                <li class="pswd_info_invalid" id="pswd_info_symbol">
+                    Only allowable special characters (if used).<br><strong>- ( ) . &amp; @ ? ' # , / " + !</strong>
+                </li>
+                <li class="pswd_info_invalid" id="pswd_info_repeats">Not contain more than 2 consecutive repeat characters</li>
+            </ul>
+        </div>
+        <div class="form-group" id="form-group-tPasswordRetype">
+            <label class="control-label" id="for-tPasswordRetype" for="tPasswordRetype">
+                <span class="required">*</span> Re-Type Password
+            </label>
+            <input name="tpasswordRetype" tabindex="4" title="" class="form-control required-entry" id="tPasswordRetype"
+                   aria-describedby="helpBlock" type="password" size="45" maxlength="55" value="" data-original-title="Retype New Password"
+                   autocomplete="off">
+            <span class="error-txt" id="error-tPasswordRetype"></span>
+            <span class="sr-only" id="sr-only-error-tPasswordRetype"></span>
+        </div>
+        <span class="help-block small" id="helpBlock">
+            Passwords must be at least 8 characters in length and include at least one uppercase letter, one lowercase letter, and one number.
+            They are case-sensitive and cannot include your username or more than two consecutive identical characters.
+            <a tabindex="-1" title="" id="password-tip" role="button" data-original-title="Password" data-toggle="popover"
+               data-remotecontent="<?php echo ($this->getTooltipsUrl()) . DS ?>tool-tip-password-help.html">
+                <img src="<?php echo $this->getImgUrl() . DS ?>info-help15x15.png" class="info-label" alt="tool tip">
+            </a>
+        </span>
+        <div id="popover_content_wrapper_retype" style="display: none">
+            <strong>Your re-type password:</strong>
+            <ul class="list-unstyled pswd_list">
+                <li class="pswd_info_invalid" id="retype_pswd_info_matching">Passwords Do Not Match</li>
+                <li class="pswd_info_valid" id="retype_pswd_info_match">Passwords Successfully Match</li>
+                <li class="pswd_info_invalid_password" id="retype_pswd_info_invalid">Invalid Password</li>
+                <li class="pswd_info_matching_progress" id="retype_pswd_info_matching_progress">Passwords Matching So Far</li>
+                <li class="pswd_info_begin" id="retype_pswd_info_begin">Begin Re-Typing Your Password</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+    </div>
+</div>
+<div class="row grid-row-margin-34">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <p>Please answer two secret questions. Answers are not case-sensitive. If you forget your password, you will be
+            asked for this information to re-gain access to our site.</p>
+        <small><span class="required">*</span> indicates a required field</small>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <strong>Pick Two Security Questions</strong>
+        <input name="regS" id="hRegS" type="hidden" value="">
+        <input name="refUrl" id="hRefUrl" type="hidden" value="">
+        <div class="form-group" id="form-group-ssec1">
+            <label class="control-label" id="for-ssec1" for="ssec1"><span class="required">*</span> First Security Question</label>
+            <select name="ssec1" tabindex="6" class="form-control required-entry" id="ssec1" rel="2">
+                <option selected="selected" value="">Select First Question</option>
+                <?php echo $this->renderSecurityOptions('o') ?>
+            </select>
+            <select name="ssec3" class="hidden" id="ssec3">
+                <option value="">Select First Question</option>
+                <?php echo $this->renderSecurityOptions('s3o') ?>
+            </select>
+            <span class="error-txt" id="error-ssec1"></span>
+            <span class="sr-only" id="sr-only-error-ssec1"></span>
+        </div>
+        <div class="form-group" id="form-group-tsecAnswer1">
+            <label class="control-label" id="for-tsecAnswer1" for="tsecAnswer1">
+                <span class="required">*</span> Your Answer
+            </label>
+            <input name="tsecAnswer1" tabindex="7" class="form-control inputs required-entry" id="tsecAnswer1"
+                   type="password" maxlength="50" value="" autocomplete="off" rel="doesMatchParent">
+            <span class="error-txt" id="error-tsecAnswer1"></span>
+            <span class="sr-only" id="sr-only-error-tsecAnswer1"></span>
+        </div>
+        <div class="form-group" id="form-group-tsecAnswer1Match">
+            <label class="control-label" id="for-tsecAnswer1Match" for="tsecAnswer1Match">
+                <span class="required">*</span> Re-Type your answer
+            </label>
+            <input name="tsecAnswer1Match" tabindex="8" title="Secret Answer Retype" class="form-control required-entry" id="tsecAnswer1Match"
+                   type="password" maxlength="50" value="" autocomplete="off">
+            <span class="error-txt" id="error-tsecAnswer1Match"></span>
+            <span class="sr-only" id="sr-only-error-tsecAnswer1Match"></span>
+        </div>
+        <div id="popover_content_wrapper_tsecAnswer1Match" style="display: none">
+            <strong>Your re-type First Security Question:</strong>
+            <ul class="list-unstyled pswd_list">
+                <li class="pswd_info_invalid" id="retype_tsecAnswer1Match_info_matching">Security First Answer Not Matched</li>
+                <li class="pswd_info_valid" id="retype_tsecAnswer1Match_info_match">Security First Answer Successfully Match</li>
+                <li class="pswd_info_invalid_password" id="retype_tsecAnswer1Match_info_invalid">Security Answer is required</li>
+                <li class="pswd_info_matching_progress" id="retype_tsecAnswer1Match_info_matching_progress">Security
+                    First Answer Matching So Far
+                </li>
+                <li class="pswd_info_begin" id="retype_tsecAnswer1Match_info_begin">Begin Re-Typing Your Security First Answer</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <strong>&nbsp;</strong>
+        <div class="form-group" id="form-group-ssec2">
+            <label class="control-label" id="for-ssec2" for="ssec2"><span class="required">*</span> Second Security Question</label>
+            <select name="ssec2" tabindex="9" class="form-control required-entry" id="ssec2" rel="1">
+                <option selected="selected" value="">Select Second Question</option>
+                <?php echo $this->renderSecurityOptions('s2o') ?>
+            </select>
+            <span class="error-txt" id="error-ssec2"></span>
+            <span class="sr-only" id="sr-only-error-ssec2"></span>
+        </div>
+        <div class="form-group" id="form-group-tsecAnswer2">
+            <label class="control-label" id="for-tsecAnswer2" for="tsecAnswer2">
+                <span class="required">*</span> Your Answer
+            </label>
+            <input name="tsecAnswer2" tabindex="10" class="form-control required-entry" id="tsecAnswer2" type="password"
+                   maxlength="50" value="" autocomplete="off" rel="doesMatchParent">
+            <span class="error-txt" id="error-tsecAnswer2"></span>
+            <span class="sr-only" id="sr-only-error-tsecAnswer2"></span>
+        </div>
+        <div class="form-group" id="form-group-tsecAnswer2Match">
+            <label class="control-label" id="for-tsecAnswer2Match" for="tsecAnswer2Match">
+                <span class="required">*</span> Re-Type your answer
+            </label>
+            <input name="tsecAnswer2Match" tabindex="11" title="Secret Answer Retype" class="form-control required-entry" id="tsecAnswer2Match"
+                   type="password" maxlength="50" value="" autocomplete="off">
+            <span class="error-txt" id="error-tsecAnswer2Match"></span>
+            <span class="sr-only" id="sr-only-error-tsecAnswer2Match"></span>
+        </div>
+        <div id="popover_content_wrapper_tsecAnswer2Match" style="display: none">
+            <strong>Your re-type Second Security Question:</strong>
+            <ul class="list-unstyled pswd_list">
+                <li class="pswd_info_invalid" id="retype_tsecAnswer2Match_info_matching">Security Second Answer Not Matched</li>
+                <li class="pswd_info_valid" id="retype_tsecAnswer2Match_info_match">Security Second Answer Successfully Match</li>
+                <li class="pswd_info_invalid_password" id="retype_tsecAnswer2Match_info_invalid">Security Second Answer is required</li>
+                <li class="pswd_info_matching_progress" id="retype_tsecAnswer2Match_info_matching_progress">Security Second Answer Matching So Far</li>
+                <li class="pswd_info_begin" id="retype_tsecAnswer2Match_info_begin">Begin Re-Typing Your Security Second Answer</li>
+            </ul>
+        </div>
+    </div>
+</div>

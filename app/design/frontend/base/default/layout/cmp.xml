@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <cmp_index_index translate="label">
+        <reference name="content">
+            <block type="cmp/cmp" name="cmp_index_index" template="cmp/cmp.phtml"/>
+        </reference>
+    </cmp_index_index>
+</layout>

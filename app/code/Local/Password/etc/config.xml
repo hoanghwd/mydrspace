@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <password>
+            <version>0.1.0</version>
+        </password>
+    </modules>
+    <global>
+        <models>
+            <password>
+                <class>Password_Model</class>
+            </password>
+        </models>
+    </global>
+</config>

@@ -1,0 +1,77 @@
+<?php
+/**
+ * @var Login_Block_Form_Forgotusername $this
+ */
+?>
+
+<div class="container" role="main" id="content">
+    <form id="forgotUsernameForm" name="forgotUsernameForm" action="<?php echo $this->getAuthUrl() ?>" method="post">
+        <div class="section-wrap" id="forgot-password-jumbotron-box">
+            <div class="row step-1 margin-bottom-15">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <strong>Enter the email address associated with your username.</strong><br>
+                    <small><span class="required">*</span> indicates a required field</small><br><br>
+                    <div class="form-group has-feedback" id="form-group-temail">
+                        <label id="for-email" for="temail" class="control-label"><span class="required">*</span> Email Address</label>
+                        <input type="text" id="temail" maxlength="50" class="form-control" required
+                               name="user_email" pattern="<?php echo EMAIL_PATTERN_HTML; ?>" value="" autocomplete="off" autocapitalize="off">
+                        <span class="error-txt error-txt-blk" id="error-temail"></span>
+                        <span class="sr-only" id="sr-only-error-temail"></span>
+                        <div class="margin-top-15 hidden" id="need-to-create-acc">
+                            Forgot it? <a id="forgot-email-link" href="/entreg/RegistrationAction_input" tabindex="4" title="Forgot Email">You'll need to create a new account.</a>
+                            <a role="button" id="password-tip" tabindex="5" title=""
+                               data-remotecontent="<?php echo $this->getTooltipsUrl() ?>/tool-tip-forgot-useralias.html"
+                               data-toggle="popover" data-original-title="You'll need a new account">
+                                <img src="<?php echo $this->getImgUrl() ?>/info-help15x15.png" class="info-label" alt="tool tip">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row step-1">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <div class="row">
+                        <!--
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="btn-wrap-single">
+                                <a id="btn-cancel" href="/entreg/ForgotUsernameAction_cancel" tabindex="6" class="btn btn-default btn-no-min btn-lg btn-block" title="Cancel">Cancel</a>
+                            </div>
+                        </div>
+                        -->
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="btn-wrap-single">
+                                <img id="forgot-username-submit-button-ajax" style="display: none" src="<?php echo ($this->getImgUrl()).DS.'spinner.gif'; ?>">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="btn-submit" tabindex="7">
+                                    <span>Continue</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row step-2 hidden" id="row2-step2">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <p>If your username is eligible for retrieval, you will receive an email with your username.  If you do not receive an email, please create a new account.</p>
+                </div>
+            </div>
+
+            <div class="row step-2 hidden">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="btn-wrap-single">
+                                <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-continue" tabindex="8">Continue</button>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<input type="hidden" id="img-url" value="<?php echo $this->getImgUrl() ?>">
+<script>new Forgotusername();</script>

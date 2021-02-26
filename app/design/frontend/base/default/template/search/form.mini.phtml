@@ -1,0 +1,35 @@
+<?php
+/**
+ * @var $this Core_Block_Template
+ * @var $searchHelper Core_Search_Helper_Data
+ */
+
+$searchHelper = $this->helper('core_search');
+?>
+<div class="block block-search" id="block-search-desktop">
+    <div class="block block-title"><strong>Search</strong></div>
+    <div class="block block-content">
+        <form class="form minisearch" id="search_mini_form" action="<?php echo $searchHelper->getResultUrl() ?>" method="get">
+            <div class="field search">
+                <label class="label" for="search" data-role="minisearch-label">
+                    <span>Search</span>
+                </label>
+                <div class="control">
+                    <input id="search" type="text" name="<?php echo $searchHelper->getQueryParamName() ?>"
+                           value="<?php echo $searchHelper->getEscapedQueryText() ?>"
+                           placeholder="<?php echo Core_Search_Model_Query::SEARCH_PLACE_HOLDER ?>" class="input-text"
+                           maxlength="<?php echo $searchHelper->getMaxQueryLength();?>"
+                           role="combobox" aria-haspopup="false" aria-autocomplete="both" autocomplete="off" aria-expanded="false">
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit" title="<?php echo Virtual::helper('core')->quoteEscape('Search') ?>"
+                        class="action search" aria-label="Search" disabled="">
+                    <span>Search</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>

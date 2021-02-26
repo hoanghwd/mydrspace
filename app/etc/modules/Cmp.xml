@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <cmp>
+            <active>true</active>
+            <codePool>Local</codePool>
+        </cmp>
+    </modules>
+</config>

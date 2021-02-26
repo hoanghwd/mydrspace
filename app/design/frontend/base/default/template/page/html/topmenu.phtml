@@ -1,0 +1,46 @@
+<?php
+/**
+ * @var Core_Page_Block_Html_Topmenu $this
+ * @see Core_Page_Block_Html_Topmenu
+ */
+$svgUrl = ($this->getImgUrl()).DS.'svg';
+?>
+
+<?php $_menu = $this->getHtml('menuheader') ?>
+<?php if ($_menu): ?>
+    <div class="global--navigation" id="g-navigation">
+        <a tabindex="-1" name="skipallnav" id="skipallnav" href="#endnav" class="hidden-skip">Skip all category navigation links</a>
+        <div class="nav-full">
+            <div class="mobile-header">
+                <a class="mobile-hamburger" href="#">
+                    <img src="<?php echo $svgUrl ?>/hamburger.svg" alt="hamburger menu Icon">
+                </a>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="mobile-logo">
+                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                </a>
+                <a class="mobile-search" href="#">
+                    <img src="<?php echo $svgUrl ?>/search.svg" alt="<?php echo $this->getSearchAlt() ?>">
+                </a>
+            </div>
+            <nav>
+                <div class="mobile-log-state">
+                    <div id="msign" class="mobile-utility">
+                        <div class="mobile-sign">
+                            <?php if( $this->isLoggedIn() ) : ?>
+                                <a class="m-sign-log" id="link-activity" href="<?php echo $this->getBaseUrl() . DS ?>myaccount">Hi, <?php echo $this->getName() ?></a>
+                                <a class="m-sign-log" href="<?php echo $this->getBaseUrl() . DS ?>logout">Sign Out</a>
+                            <?php else : ?>
+                                <a class="m-sign-log" href="<?php echo $this->getBaseUrl() . DS ?>login">Login</a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-list" role="menubar">
+                    <?php echo $_menu; ?>
+                </ul>
+            </nav>
+            <?php $this->getChildHtml('megamenu.responsive.search') ?>
+            <a name="endnav" id="endnav" href="#" class="hidden-skip">&nbsp;</a>
+        </div>
+    </div>
+<?php endif ?>

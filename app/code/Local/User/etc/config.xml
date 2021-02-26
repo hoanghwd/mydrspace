@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <user>
+            <version>0.1.0</version>
+        </user>
+    </modules>
+    <global>
+        <models>
+            <user>
+                <class>User_Model</class>
+                <resourceModel>user_resource</resourceModel>
+            </user>
+            <user_resource>
+                <class>User_Model_Resource</class>
+                <entities>
+                    <profile>
+                        <table>user_profile</table>
+                    </profile>
+                    <role>
+                        <table>user_role</table>
+                    </role>
+                </entities>
+            </user_resource>
+        </models>
+    </global>
+</config>

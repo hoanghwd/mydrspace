@@ -1,0 +1,34 @@
+<?php
+/**
+ * @var $this Core_Page_Block_Html_Topmenu
+ * @var $searchHelper Core_Search_Helper_Data
+ */
+
+$searchHelper = $this->helper('core_search');
+?>
+<div class="search--wrapper-hidden" id="search--display">
+    <span aria-hidden="false" class="input--wrap-label"></span>
+    <form role="search" method="get" class="search global-header--search" action="<?php echo $searchHelper->getResultUrl() ?>">
+        <span aria-hidden="false" class="input--wrap">
+            <div class="easy-autocomplete search-box">
+                <label class="visuallyhidden" for="global-header--search-track-mob-search">Enter Search term for Search</label>
+                <input autocomplete="off" type="text"
+                       placeholder="<?php echo $this->getSearchPlaceHolder() ?>"
+                       class="search--track-input input--field q fsrVisible global-header--search-track"
+                       id="global-header--search-track-mob-search"
+                       maxlength="<?php echo $searchHelper->getMaxQueryLength();?>"
+                       name="<?php echo $searchHelper->getQueryParamName() ?>"
+                       value="<?php echo $searchHelper->getEscapedQueryText() ?>">
+                <input value="" class="input--search search--submit" type="submit">
+            </div>
+            <div class="autocorrect"><ul></ul></div>
+        </span>
+    </form>
+    <div class="empty-search">
+        <p>Top Searches:</p>
+        <ul>
+            <li><a role="menuitem" tabindex="-1" href="<?php echo $searchHelper->getResultUrl() ?>?PNO=1&amp;keyword=PO%20Boxes">Nearest Physician</a></li>
+            <li><a role="menuitem" tabindex="-1" href="<?php echo $searchHelper->getResultUrl() ?>?PNO=1&amp;keyword=Passports">Nearest Pharmacy</a></li>
+        </ul>
+    </div>
+</div>

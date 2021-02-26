@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <resources>
+            <connection>
+                <host><![CDATA[localhost]]></host>
+                <username><![CDATA[root]]></username>
+                <usernameSSH><![CDATA[hdo]]></usernameSSH>
+                <password><![CDATA[xuongrong1976]]></password>
+                <dbname><![CDATA[mydrspace]]></dbname>
+                <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+                <model><![CDATA[mysql4]]></model>
+                <type><![CDATA[pdo_mysql]]></type>
+                <pdoType><![CDATA[]]></pdoType>
+                <active>1</active>
+            </connection>
+        </resources>
+
+    </global>
+</config>
+

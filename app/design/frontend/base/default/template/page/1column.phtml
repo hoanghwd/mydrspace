@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <?php echo $this->getChildHtml('head') ?>
+    </head>
+    <body class="cms-home cms-index-index page-layout-1column">
+        <?php echo $this->getChildHtml('after_body_start') ?>
+        <?php echo $this->getChildHtml('global_notices') ?>
+        <div class="page-wraper">
+            <?php echo $this->getChildHtml('header') ?>
+            <main id="maincontent" class="page-main">
+                <?php echo $this->getChildHtml('global_messages') ?>
+                <?php echo $this->getChildHtml('messages.visual') ?>
+                <?php echo $this->getChildHtml('content') ?>
+            </main>
+            <?php echo $this->getChildHtml('footer_before') ?>
+            <?php echo $this->getChildHtml('footer') ?>
+            <?php echo $this->getChildHtml('global_cookie_notice') ?>
+            <?php echo $this->getChildHtml('before_body_end') ?>
+        </div>
+    </body>
+</html>

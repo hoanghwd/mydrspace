@@ -1,0 +1,64 @@
+<?php
+/**
+ * @var Core_Page_Block_Html_Header $this
+ */
+?>
+
+<header class="page-header">
+    <div class="panel wrapper">
+        <div class="nav-utility" id="nav-utility">
+            <div class="utility-links" id="utility-header">
+                <a id="link-locator" href="<?php echo $this->getLocationUrl() ?>">Locations</a>
+                <a id="link-customer" href="<?php echo $this->getContactUsUrl() ?>">Support</a> 
+                <!--
+                <div id="link-cart" style="display: inline-block;">
+                    <a href="/store/cart/cart.jsp">Shopping Cart (<span id="shopping-cart-panel-quantity">0</span>)</a>
+                </div>
+                -->               
+                <a id="login-register-header" class="link-reg" href="<?php echo ($this->isLoggedIn()) ? '#' : $this->getSignInUrl() ?>">
+                    <div id="nav-tool-login" class="nav-tool">
+                        <div class="anchor" id="anchor-login" name="anchor-login">
+                            <h2 style="font-weight: 600;color: #336;">
+                                <?php echo $this->getChildHtml('welcome') ?>
+                            </h2>
+                        </div>
+                        <?php if ($this->isLoggedIn()) : ?>
+                            <div class="nav-pipe"></div>
+                            <div class="nav-window" style="height: 0px; overflow: hidden;">
+                                <div class="content">
+                                    <div>
+                                        <p><?php echo $this->getName(); ?>,</p>
+                                        <ul class="fontStyle9">
+                                            <li>Thanks for registering for an account. Get started using <?php echo APP_NAME ?>.</li>
+                                            <li><div id="profile" style="margin-top: 10px;border-top: 1px solid #ededed;border-top: 1px solid #c1c1c1;padding-top: 10px">My Profile<div></li>
+                                            <li><div id="sign-out" style="margin-top: 10px">Sign Out</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav-pipe"></div>
+                            <script>
+                                jQuery("#sign-out").on("click", function () {
+                                    redirectToPage('<?php echo $this->getLogOutUrl() ?>');
+                                });
+                                jQuery("#profile").on("click", function () {
+                                    redirectToPage('<?php echo $this->getProfileUrl(); ?>');
+                                });
+                            </script>
+                        <?php endif ?>
+                    </div>                    
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header content">
+        <a href="<?php echo $this->getBaseUrl() ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+            <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+        </a>
+        <div class="block block-search">
+            <div class="block block-content">
+                <?php echo $this->getChildHtml('topSearch') ?>
+            </div>
+        </div>
+    </div>
+</header>

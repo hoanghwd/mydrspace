@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Core_Menu>
+            <version>1.8.2.0</version>
+        </Core_Menu>
+    </modules>
+    <global>
+        <models>
+            <menu>
+                <class>Core_Menu_Model</class>
+                <resourceModel>menu_resource</resourceModel>
+            </menu>
+            <menu_resource>
+                <class>Core_Menu_Model_Resource</class>
+                <deprecatedNode>menu_mysql4</deprecatedNode>
+                <entities>
+                    <menu>
+                        <table>core_menu</table>
+                    </menu>
+                </entities>
+            </menu_resource>
+        </models>
+    </global>
+</config>

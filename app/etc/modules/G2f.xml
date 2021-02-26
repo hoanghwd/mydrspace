@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <g2f>
+            <active>true</active>
+            <codePool>Local</codePool>
+        </g2f>
+    </modules>
+</config>

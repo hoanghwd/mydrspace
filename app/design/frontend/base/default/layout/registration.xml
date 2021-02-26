@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <registration_index_index translate="label">       
+        <reference name="head">
+            <action method="addJs">
+                <script>registration/uploadfile.js</script>
+            </action>
+            <action method="addJs">
+                <script>project/password.js</script>
+            </action>
+            <action method="addJs">
+                <script>project/inputmask.bundle.js</script>
+            </action>
+            <action method="addJs">
+                <script>registration/address-wizard-business.js</script>
+            </action>
+            <action method="addJs">
+                <script>registration/register.js</script>
+            </action>
+            <action method="addCss">
+                <stylesheet>registration/uploadfile.css</stylesheet>
+            </action>
+        </reference>          
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="registration/form_createaccount" name="registration_index_index" template="registration/createaccount.phtml" >
+                <block type="registration/form_createaccount" name="registration_username" as="registration_username"
+                       template="registration/steps/username.phtml" after="-"/>
+                <block type="registration/steps_security" name="registration_security_info" as="registration_security_info"
+                       template="registration/steps/securityinfo.phtml" after="-"/>
+                <block type="registration/form_createaccount" name="registration_select_account" as="registration_select_account"
+                       template="registration/steps/selectaccount.phtml" after="-"/>
+                <block type="registration/form_createaccount" name="registration_contact_info" as="registration_contact_info"
+                       template="registration/steps/contact.phtml" after="-"/>
+                <block type="registration/form_createaccount" name="registration_address_info" as="registration_address_info"
+                       template="registration/steps/addressinfo.phtml" after="-"/>
+                <block type="registration/form_createaccount" name="registration_specialties" as="registration_specialties"
+                       template="registration/steps/specialties.phtml" after="-"/>
+            </block>
+        </reference>
+    </registration_index_index>
+</layout>

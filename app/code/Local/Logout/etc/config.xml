@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <cmp>
+            <version>0.1.0</version>
+        </cmp>
+    </modules>
+    <frontend>
+        <routers>
+            <logout>
+                <use>standard</use>
+                <args>
+                    <module>logout</module>
+                    <frontName>logout</frontName>
+                </args>
+            </logout>
+        </routers>
+    </frontend>
+</config>

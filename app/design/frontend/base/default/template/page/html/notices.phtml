@@ -1,0 +1,19 @@
+<?php if ($this->displayNoscriptNotice()): ?>
+    <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong><?php echo 'JavaScript seems to be disabled in your browser.'; ?></strong>
+                    <br />
+                    <?php echo 'You must have JavaScript enabled in your browser to utilize the functionality of this website.'; ?>
+                </p>
+            </div>
+        </div>
+    </noscript>
+<?php endif;  ?>
+
+<?php if ($this->displayDemoNotice()): ?>
+<div class="global-site-notice demo-notice">
+    <div class="notice-inner"><p><?php echo 'This is a demo store. Any orders placed through this store will not be honored or fulfilled.'; ?></p></div>
+</div>
+<?php endif; 

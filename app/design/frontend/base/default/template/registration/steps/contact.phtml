@@ -1,0 +1,125 @@
+<div class="row grid-row-margin-34" id="contact-section" style="display:none;">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <h3 class="subhead subhead-lg">Step 4: <strong>Enter your contact information</strong></h3>
+        <p>Please review and edit your contact information for your <?php echo APP_NAME ?> account</p>
+        <small><span class="required">*</span> indicates a required field</small>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <strong>Name</strong>
+        <div class="form-group" id="form-group-stitle">
+            <label class="control-label" id="for-stitle" for="stitle">Title</label>
+            <select name="stitle" tabindex="14" class="form-control" id="stitle">
+                <option value=" ">Select</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Ms">Ms</option>
+                <option value="Miss">Miss</option>
+                <option value="Dr">Dr</option>
+            </select>
+            <span class="error-txt" id="error-stitle"></span>
+            <span class="sr-only" id="sr-only-error-stitle"></span>
+        </div>
+        <div class="form-group" id="form-group-tfName">
+            <label class="control-label" id="for-tfName" for="tfName"><span class="required">*</span> First Name</label>
+            <input name="tfName" tabindex="15" title="" class="form-control required-entry" id="tfName" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tfName"></span>
+            <span class="sr-only" id="sr-only-error-tfName"></span>
+        </div>
+        <div class="form-group" id="form-group-tmI">
+            <label class="control-label" id="for-tmI" for="tmI">M.I.</label>
+            <input name="tmI" tabindex="16" title="" class="form-control" id="tmI" type="text" size="1" maxlength="1" value="" data-original-title="">
+            <span class="error-txt" id="error-tmI"></span>
+            <span class="sr-only" id="sr-only-error-tmI"></span>
+        </div>
+        <div class="form-group" id="form-group-tlName">
+            <label class="control-label" id="for-tlName" for="tlName"><span class="required">*</span> Last Name</label>
+            <input name="tlName" tabindex="17" title="" class="form-control required-entry" id="tlName" type="text" maxlength="50" value="" data-original-title="">
+            <span class="error-txt" id="error-tlName"></span>
+            <span class="sr-only" id="sr-only-error-tlName"></span>
+        </div>
+        <div class="form-group" id="form-group-tLanguageSpoken">
+            <label class="control-label" id="for-tLanguageSpoken" for="tLanguageSpoken">Language Spoken</label>
+            <select name="tLanguageSpoken" tabindex="18" class="form-control" id="tLanguageSpoken">
+                <option value=" ">Select</option>
+                <option value="EN">English</option>
+                <option value="CH">Chinese</option>
+                <option value="ME">Mexican</option>
+                <option value="VI">Vietnamese</option>
+            </select>
+            <span class="error-txt" id="error-tLanguageSpoken"></span>
+            <span class="sr-only" id="sr-only-error-tLanguageSpoken"></span>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <strong>Email &amp; Phone</strong>
+        <div class="form-group" id="form-group-temail">
+            <label class="label-tool-tip-after" id="for-temail" for="temail"><span class="required">*</span> Email Address
+                <a tabindex="19" title="" id="email-tip" role="button" data-original-title="Email Address" data-toggle="popover"
+                   data-remotecontent="<?php echo ($this->getTooltipsUrl()).DS ?>tool-tip-email-address.html">
+                    <img src="<?php echo $this->getImgUrl().DS ?>info-help15x15.png" class="info-label" alt="tool tip">
+                </a>
+            </label>
+            <input name="temail" tabindex="20" title="" class="form-control required-entry" id="temail" type="email" maxlength="50" value=""
+                   data-original-title="" rel="doesMatchParent">
+            <span class="error-txt" id="error-temail"></span>
+            <span class="sr-only" id="sr-only-error-temail"></span>
+            <span id="result-temail"></span>
+        </div>
+        <div class="form-group" id="form-group-temailRetype">
+            <label class="control-label" id="for-temailRetype" for="temailRetype"><span class="required">*</span> Re-Type Email Address</label>
+            <input name="temailRetype" tabindex="21" title="" class="form-control required-entry" id="temailRetype" type="email"
+                   maxlength="50" value="" data-original-title="" rel="i20">
+            <span class="error-txt" id="error-temailRetype"></span>
+            <span class="sr-only" id="sr-only-error-temailRetype"></span>
+            <input name="temailVerify" style="display:none" value="">
+        </div>
+        <div id="popover_content_wrapper_temailRetype" style="display: none">
+            <strong>Your re-type email:</strong>
+            <ul class="list-unstyled pswd_list">
+                <li class="pswd_info_invalid" id="retype_temailRetype_info_matching">Email Retype Not Matched</li>
+                <li class="pswd_info_valid" id="retype_temailRetype_info_match">Email Retype Successfully Match</li>
+                <li class="pswd_info_invalid_password" id="retype_temailRetype_info_invalid">Email is required</li>
+                <li class="pswd_info_matching_progress" id="retype_temailRetype_info_matching_progress">Email Retype Matching So Far</li>
+                <li class="pswd_info_begin" id="retype_temailRetype_info_begin">Begin Re-Typing Email Retype</li>
+                <li class="pswd_info_invalid" id="retype_temailRetype_info_invalid_match">Invalid/Taken Email Address</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-6">
+                <div class="form-group" id="form-group-tphone">
+                    <label class="control-label" id="for-tphone" for="tphone"><span class="required">*</span> Phone
+                        <a tabindex="22" title="" id="password-tip" role="button" data-original-title="Phone" data-toggle="popover"
+                           data-remotecontent="<?php echo ($this->getTooltipsUrl()).DS ?>tool-tip-phones.html">
+                            <img src="<?php echo $this->getImgUrl().DS ?>info-help15x15.png" class="info-label" alt="tool tip">
+                        </a>
+                    </label>
+                    <input name="tphone" tabindex="23" title="" class="form-control required-entry" id="tphone" type="tel" maxlength="14" value="" data-original-title="" rel="i13">
+                    <span class="error-txt" id="error-tphone"></span>
+                    <span class="sr-only" id="sr-only-error-tphone"></span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="form-group" id="form-group-text">
+                    <label class="control-label" id="for-text" for="text">Ext.</label>
+                    <input name="text" tabindex="24" title="" class="form-control" id="text" type="tel" maxlength="5" value="" data-original-title="" rel="i14">
+                    <span class="error-txt" id="error-text"></span>
+                    <span class="sr-only" id="sr-only-error-text"></span>
+                </div>
+            </div>
+        </div>
+        <strong>Can we contact you by this phone?</strong>
+        <p>Get communications from <?php echo APP_NAME ?> and our partners.</p>
+        <div class="checkbox">
+            <label>
+                <input name="cfrm" tabindex="25" class="checkbox" id="cfrm" type="checkbox" value="true">
+                From <?php echo APP_NAME ?>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input name="cfrmPartners" tabindex="26" class="checkbox" id="cfrmPartners" type="checkbox" value="true">
+                From <?php echo APP_NAME ?> Partners
+            </label>
+        </div>
+    </div>
+</div>

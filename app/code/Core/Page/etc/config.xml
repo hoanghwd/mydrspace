@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Page>
+            <version>1.6.0.0</version>
+        </Page>
+    </modules>
+    <global>
+        <models>
+            <page>
+                <class>Core_Page_Model</class>
+            </page>
+        </models>
+        <blocks>
+            <page>
+                <class>Core_Page_Block</class>
+            </page>
+        </blocks>
+        <page>
+            <layouts>
+                <empty module="page" translate="label">
+                    <label>Empty</label>
+                    <template>page/empty.phtml</template>
+                    <layout_handle>page_empty</layout_handle>
+                </empty>
+                <one_column module="page" translate="label">
+                    <label>1 column</label>
+                    <template>page/1column.phtml</template>
+                    <layout_handle>page_one_column</layout_handle>
+                    <is_default>1</is_default>
+                </one_column>
+                <two_columns_left module="page" translate="label">
+                    <label>2 columns with left bar</label>
+                    <template>page/2columns-left.phtml</template>
+                    <layout_handle>page_two_columns_left</layout_handle>
+                </two_columns_left>
+                <two_columns_right module="page" translate="label">
+                    <label>2 columns with right bar</label>
+                    <template>page/2columns-right.phtml</template>
+                    <layout_handle>page_two_columns_right</layout_handle>
+                </two_columns_right>
+                <three_columns module="page" translate="label">
+                    <label>3 columns</label>
+                    <template>page/3columns.phtml</template>
+                    <layout_handle>page_three_columns</layout_handle>
+                </three_columns>
+            </layouts>
+        </page>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <page>
+                    <file>page.xml</file>
+                </page>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <design>
+            <head translate="default_description" module="page">
+                <default_title>MydrSpace</default_title>
+                <default_description>A GUI Virtual Box</default_description>
+                <default_robots>*</default_robots>
+                <default_media_type>text/html</default_media_type>
+                <default_charset>utf-8</default_charset>
+                <demonotice>0</demonotice>
+            </head>
+            <header translate="welcome" module="page">
+                <logo_src>images/logo.png</logo_src>
+                <logo_alt>DR space</logo_alt>
+                <logo_src_small>images/logo.png</logo_src_small>
+                <welcome>Default welcome msg!</welcome>
+                <signin>Register / Sign In</signin>
+                <search_alt>Search</search_alt>
+                <search_place_holder>Search entire web here...</search_place_holder>
+            </header>
+            <footer translate="copyright" module="page">
+                <copyright>All Rights Reserved.</copyright>
+            </footer>
+        </design>
+    </default>
+</config>
