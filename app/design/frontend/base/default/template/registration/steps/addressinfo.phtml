@@ -139,16 +139,18 @@
                     entered during registration.</p>
                 <div class="form-group" id="form-group-tEmailVerification">
                     <label class="control-label" id="for-tEmailVerification" for="tEmailVerification">
-                        <span class="required">*</span> Re-enter your email address
+                        <span class="required">*</span>Re-enter your email address
                     </label>
                     <input name="tEmailVerification" tabindex="%{#tabindexanchor}" class="form-control" id="tEmailVerification" type="text" maxlength="50">
-                    <div class="hidden" id="email-verification-error"><span class="error-txt" id="error-tEmailVerification">
-                        <span class="error-txt-blk">
-                            <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
-                            <span class="sr-only">Error:</span>The email address you entered does not match the email address entered during registration.</span>
+                    <div class="hidden" id="email-verification-error">
+                        <span class="error-txt" id="error-tEmailVerification">
+                            <span class="error-txt-blk">
+                                <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error:</span>The email address you entered does not match the email address entered during registration.
+                            </span>
                         </span>
                     </div>
-                    <span class="sr-only" id="sr-only-error-tEmailVerification"></span>
+                    <div id="email-verification-result"></div>
                 </div>
             </div>
             <div class="modal-footer">

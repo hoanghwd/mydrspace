@@ -479,7 +479,14 @@ Register.prototype = {
 
                             }
                             else {
-
+                                var inValid =
+                                    '<span class="error-txt">' +
+                                        '<span class="error-txt-blk">' +
+                                            '<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>' +
+                                            '<span class="sr-only">Error:</span>It looks like someone already registered this email.' +
+                                        '</span>' +
+                                    '</span>';
+                                jQuery("#email-verification-result").html(inValid).fadeIn();
                             }
                         }
                     },
@@ -654,6 +661,7 @@ Register.prototype = {
             jQuery("#tEmailVerification").
             on("click", function () {
                 jQuery("#email-verification-error").addClass("hidden");
+                jQuery("#email-verification-result").empty();
             });
             jQuery('#tphone').inputmask({
                 mask: _phones,

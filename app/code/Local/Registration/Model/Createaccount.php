@@ -295,6 +295,7 @@ class Registration_Model_Createaccount extends Core_Model_Abstract
     }
 
     /**
+     * @param $email
      * @return mixed
      * @throws Exception
      */
